@@ -1,0 +1,13 @@
+CAPSTONE PROJECT 1: DATA WRANGLING REPORT
+
+I downloaded the “Books” subset of the “Amazon product data” released by Julian McAuley. I opened the json file in a Jupyter Notebook and examined the first few entries. I stripped ‘\n’ from each item before converting to a DataFrame. 
+
+I ran .info, .describe, .shape, .column, etc. to get an overall sense of the data. I showed box plots and histograms for the mean review score. I split the helpful column, into two np.arrays, one for helpful votes, and one for total votes, for easier access.
+
+Since the data has 8.8 million rows, I decided to utilize a more manageable subset of 10,000 rows for exploring the data.
+
+The data itself is generally clean. There are no obvious errors from the outset.
+
+When computing the percentage of total votes, I utilized an np_subset to avoid all cases of division by zero. Using this subset is essential since reviews with no total votes do not add anything to the data.
+
+There are outliers in the subset. They consist of reviewers that have received over 200 votes. These outliers are essential to the data since these reviews receive the most feedback from other users.
