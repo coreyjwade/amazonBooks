@@ -11,3 +11,5 @@ The data itself is generally clean. There are no obvious errors from the outset.
 When computing the percentage of total votes, I utilized an np_subset to avoid all cases of division by zero. Using this subset is essential since reviews with no total votes do not add anything to the data.
 
 There are outliers in the subset. They consist of reviewers that have received over 200 votes. These outliers are essential to the data since these reviews receive the most feedback from other users.
+
+One error was subequently found, an entry with more helpful votes than total votes. This entry was removed.
